@@ -1,0 +1,47 @@
+{% extends  'basic.html' %} {% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/fullstackproject.css' %}">
+<style>
+    @media only screen and (max-width:500px){
+        .skillsLi{
+        width: 33% !important;
+    }
+    }
+</style>
+    {% endblock css %}
+    {% block Rightcontent %}
+    <div class="sticky-home-wrapper">
+
+        <!-- about area -->
+       
+        <!-- about area end -->
+
+        <!-- Start skiull area -->
+        <div class="rn-skill-area section-height"  data-aos="fade-left" data-aos-duration="500" data-aos-delay="200" data-aos-once="false">
+            <div class="inner slide indexAccordain" >
+        
+              
+                        <h5 class="title">  My Skills</h5>
+             
+                <!-- </button> -->
+                <div class="skill-share-inner pt--100"  >
+                    <span class="title"></span>
+                    <ul class="skill-share d-flex liststyle skills-list">
+                        {% for i in Skills %}
+                       <li  class="skillsLi"><a href=""><img src="{{i.skill_Image.url}}" alt="Icons Images" style="    max-height: 71px !important;"></a>
+                  {{i.name}}
+                    </li>  
+                        {% endfor %}
+
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+
+   
+                            {% include 'socialIcons.html' %}
+                     
+                 
+                                      
+                        {% endblock Rightcontent %}

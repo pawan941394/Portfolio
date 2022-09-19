@@ -1,0 +1,14 @@
+.social-handles .skill-share-inner  ul li {
+    width: 21% !important;
+    height: 21% !important;
+    line-height: 81px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.social-handles .skill-share-inner  ul li img {
+    max-height: 71px !important;
+    box-shadow: var(--shadow1) !important ;
+}

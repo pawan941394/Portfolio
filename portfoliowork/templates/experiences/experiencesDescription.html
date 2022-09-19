@@ -1,0 +1,43 @@
+{% extends  'basic.html' %} {% load static %}
+{% block css %}
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    {% endblock css %}
+    {% block Rightcontent %}
+    <div class="sticky-home-wrapper" data-aos="fade-left" data-aos-duration="500" data-aos-delay="200" data-aos-once="true">
+
+        <div class="certificationInformation section-height" style=" padding:22px 10px 0px !important;   margin-bottom: 18%;">
+           <div class="img"  style="margin-bottom: 4%;"><img src=" {{Experience.Experience_image.url}}" alt="" srcset="" style="border-radius: 28px;"></div>
+           <div class="contentrelatedcert">
+            <div class="inner slide social-handles" style="    margin-top: 5%;">
+                <h5 class="title" >
+                    About  {{Experience.Experience_name}}
+                </h5>
+                <div class="skill-share-inner" >
+
+                    <p class="text-white" style="font-family: 'Open Sans', sans-serif;margin-top: 2%;
+            ">{{Experience.content|safe}}</p>
+                </div>
+          
+                <a class="rn-btn" href="{{Experience.Experience_image.url}}" style="margin-top: 5%;" target="_blank"><span>Download certificate</span></a>
+            </div>
+        </div>
+          
+           
+        </div>
+               <!-- about area end -->
+
+               <!-- Start skiull area -->
+               {% include 'socialIcons.html' %}
+               
+               <!-- End skiull area -->
+
+          
+               <!-- End contact area -->
+
+           </div>
+                    {% endblock Rightcontent %}

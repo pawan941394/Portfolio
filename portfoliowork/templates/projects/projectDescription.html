@@ -1,0 +1,70 @@
+{% extends  'basic.html' %} {% load static %}
+{% block css %}
+<style>
+    iframe {
+        width: 100%;
+        height: 339px;
+    }
+
+    @media only screen and (max-width:760px) {
+        iframe {
+            width: 100%;
+            height: 265px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        iframe {
+            width: 100%;
+            height: 202px;
+        }
+
+    }
+
+    .certificationInformation p {
+        font-size: 15px;
+    }
+</style>
+    {% endblock css %}
+    {% block Rightcontent %}
+    <div class="sticky-home-wrapper" data-aos="fade-left" data-aos-duration="500"
+    data-aos-delay="200" data-aos-once="true">
+
+    <div class="certificationInformation section-height"
+        style=" padding:22px 10px 0px !important;   margin-bottom: 18%;">
+        <div class="img">
+
+
+            <iframe src="{{proj.video_Link}}"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="contentrelatedcert " style="    margin-top: 5%;">
+            <div class="inner slide social-handles" style="    margin-top: 5%;">
+                <h5 class="title" style="margin-bottom: -8% !important;">
+                    About The {{proj.Project_name}}
+                </h5>
+                <div class="skill-share-inner pt--100" style="margin-bottom: -25%;">
+
+                    <p class="text-white" style="font-family: 'Open Sans', sans-serif;margin-top: -9%;
+            ">{{proj.content|safe}}</p>
+                </div>
+          
+                <a class="rn-btn" href="{{proj.code_Link}}" style="margin-top: 0%;" target="_blank"><span>Source Code</span></a>
+            </div>
+        </div>
+    </div>
+    {% include 'socialIcons.html' %}
+    <!-- about area end -->
+
+    <!-- Start skiull area -->
+   
+    <!-- End skiull area -->
+
+
+    <!-- End contact area -->
+
+</div>
+    {% endblock Rightcontent %}
+    

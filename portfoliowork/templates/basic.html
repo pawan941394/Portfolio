@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pawan kumar</title>
+    <meta name="description" content="Pawan kumar portfolio website">
+    <meta name="keywords" content="pawan kumar,pawankumar,pawan941394,pawankumarportfolio,pawankumarprojects,projects,Pawan kumar,Pawan">
+    <meta name="author" content="Pawan kumar">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <!-- CSS 
+    ============================================ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/feature.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        .skillsLi {
+            width: 25% !important;
+            height: 20% !important;
+            line-height: 60px !important;
+            display: flex;
+            flex-direction: column;
+            padding-top: 4%;
+        }
+
+        @media only screen and (max-width:580px) {
+            .skills-list {
+                padding: 0 0 0 0px !important;
+            }
+
+
+        }
+
+        @media only screen and (max-width:510px) {
+            .skillsLi {
+                width: 43% !important;
+            }
+
+
+        }
+    </style>
+    {% block css %}
+    {% endblock css %}
+
+</head>
+
+
+<body class="template-color-1 home-sticky spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
+    <main class="main-page-wrapper">
+        <!-- start slider area -->
+        <div class="rn-slider-area">
+            <div class="container">
+                <div class="row row--30 pt--100 pt_sm--50">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200"
+                        data-aos-once="false">
+                        <div class="d-flex flex-wrap align-content-start h-100">
+                            <div class="sticky-top-slider position-sticky sticky-top rbt-sticky-top-adjust-two" style="    top: 107px !important;">
+                                <div class="banner-details-wrapper-sticky slide">
+                                    <div class="thumbnail">
+                                        <img src="{{abousUs.profile_Image.url}}" alt="Personal Portfolio">
+                                    </div>
+                                    <div class="banner-title-area pt--30">
+                                        <h1 class="title">Hi, I’m <span>Pawan kumar</span><br><span class="span">
+                                                Software
+                                                Engineer.</span></h1>
+                                        <p class="disc">
+                                            {{abousUs.main_sub_heading }}
+
+                                        </p>
+                                    </div>
+                                    <div class="button-group text-center text-md-left pt--60 pt_md--40 pt_sm--40">
+                                        <a class="rn-btn" href="{{cv.cv.url}}" target="_blank"><span>Download My CV</span></a>
+                                        <a class="rn-btn" href="{% url 'Hire'  %}"><span>Hire Me</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        {% block Rightcontent %}
+                        {% endblock Rightcontent %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End slider area -->
+
+        <!-- Back to  top Start -->
+        <div class="backto-top">
+            <div>
+                <i data-feather="arrow-up"></i>
+            </div>
+        </div>
+        <!-- Back to top end -->
+    </main>
+    <!-- JS ============================================ -->
+    <script src="{% static 'js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'js/vendor/modernizer.min.js' %}"></script>
+    <script src="{% static 'js/vendor/feather.min.js' %}"></script>
+    <script src="{% static 'js/vendor/feather.min.js' %}"></script>
+    <script src="{% static 'js/vendor/slick.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'js/vendor/text-type.js' %}"></script>
+    <script src="{% static 'js/vendor/wow.js' %}"></script>
+    <script src="{% static 'js/vendor/wow.js' %}"></script>
+    <script src="{% static 'js/vendor/aos.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+
+</html>
